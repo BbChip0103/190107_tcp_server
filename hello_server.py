@@ -1,6 +1,6 @@
 # TCP server example
 
-MY_PORT = 7777
+MY_PORT = 38001
 
 import socket
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -12,8 +12,9 @@ print ( "TCPServer Waiting for client on port "+str(MY_PORT) )
 client_socket, address = server_socket.accept()
 print ("I got a connection from ", address)
 
-data = input('SEND MESSAGE:')
-client_socket.send(data.encode())
+while:
+	data = input('SEND MESSAGE:')
+	client_socket.send(data.encode())
 
 server_socket.close()
 print("SOCKET closed... END")
